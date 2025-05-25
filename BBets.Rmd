@@ -1,6 +1,6 @@
 ---
 title: "Brownlows Bets"
-author: "Your Name Goes Here"
+author: "Racheal Adeneye"
 output: 
   html_document:
     number_sections: true
@@ -41,13 +41,36 @@ The function will be given a class_size by number of students, odds, and Number_
 ## the standard deviation and a 95% confidence interval for their earnings?
   
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
+###First, we will run the brlw function 1000 seperate times and each time it runs, we will capture the number that represents how much Brownlow will make. Next we will sort the 1000 different numbers from low to high. Then, we will grab the lower two and a half percent.
 
+```{r}
+MyData= numeric(1000)
+for (i in 1:1000) {
+  MyData[i]=BrLw()
+}
+sMyData =sort(MyData)
+low=sMyData[25]
+high=sMyData[975]
+average=mean(sMyData)
+
+```
+
+## Effective Confidence interval `r low` to `r high`
 
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
-
+```{r}
+MyData2 = numeric(1000)
+for (i in 1:1000) {
+  MyData2[i]= BrLw(odds = 4.36)
+}
+sMyData2 = sort(MyData2) 
+low=sMyData2[25]
+high=sMyData2[975]
+average=mean(sMyData2)
+```
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
-
+To find the fair odds for Professor Brownlow’s bets, we ran 1000 simulations of his earnings using different odds values. For each set of simulations, we calculated the average earnings. We adjusted the odds until the average earnings were close to zero, meaning he would break even in the long run. Once we found the odds that gave an average around zero, we sorted the results and took the 25th and 975th values to create a 95% confidence interval. This shows the range where most of his earnings would fall, even when betting at fair odds.
 
 
 
