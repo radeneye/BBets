@@ -102,4 +102,5 @@ He made in a 95% confidence interval with an interval from $226-337 dollars with
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
+If Professor Brownlow is consistently making or losing money, he can make the bet fair by adjusting either the payout or the class size. To balance his profits around zero, he should change the payout ratio. If he's making too much money, he should increase the payout to students. If he's losing money, he should decrease the payout. Alternatively, he can keep the 2:1 payout but adjust the class size. Through simulation, we found that when the class size is around 28 students, the bet becomes fair and his expected earnings center around zero. By tweaking either the payout or the number of students, Professor Brownlow can create a fair betting system.
 
