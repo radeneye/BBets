@@ -75,14 +75,24 @@ To find the fair odds for Professor Brownlow’s bets, we ran 1000 simulations o
 
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
+```{r}
+MyData3= numeric(1000)
+for (i in 1:1000) {
+  MyData2[i]=BrLw(numClass = 28)
+}
+sMyData3 =sort(MyData3)
+low=sMyData3[25]
+high=sMyData3[975]
+middle=mean(sMyData3)[500]
+
+```
+
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+We ran 1000 simulations of Professor Brownlow’s betting outcomes for different class sizes using the BrLw() function. For each class size, we calculated the average earnings from the 1000 simulations. We manually adjusted the number of students in the class until the average earnings came close to zero, which would mean the bet is fair at that class size.
 
-
-
-
-
+After finding the fair class size, we sorted the earnings and calculated the 2.5th and 97.5th percentiles (values 25 and 975 from the sorted list) to form a 95% confidence interval. This gives a range of how much Professor Brownlow might win or lose, even when betting at fair class size.
 
 
 # Discussion and Conclusion
