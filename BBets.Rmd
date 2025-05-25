@@ -95,6 +95,9 @@ We ran 1000 simulations of Professor Brownlow’s betting outcomes for different
 After finding the fair class size, we sorted the earnings and calculated the 2.5th and 97.5th percentiles (values 25 and 975 from the sorted list) to form a 95% confidence interval. This gives a range of how much Professor Brownlow might win or lose, even when betting at fair class size.
 
 
+## Effective Confidence interval `r low` to `r high` with average `r average`
+
+
 # How much money would Brownlow be expected to end up with if the bets went as described.
 He made in a 95% confidence interval with an interval from $226-337 dollars with an average of 281.
 
